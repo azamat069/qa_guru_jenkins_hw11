@@ -1,6 +1,7 @@
 from pages.registration_page import RegistrationPage
 import allure
 
+
 def test_registration_page():
     registration_page = RegistrationPage()
     with allure.step('Открываем браузер, на странице регистрации'):
@@ -23,6 +24,6 @@ def test_registration_page():
         registration_page.click_submit_button()
     with allure.step('Проверям данные'):
         registration_page.assert_user_data_form('Azamat QA', 'email@email.com', 'Male',
-                                            '1234567890', '17 April,1999',
-                                            'Computer Science', 'Sports, Music',
-                                            'image.jpeg', 'Moscow Lenina 124 street', 'Haryana Karnal')
+                                                '1234567890', '17 April,1999',
+                                                'Computer Science', 'Sports, Music',
+                                                'image.jpeg', 'Moscow Lenina 124 street', 'Haryana Karnal')

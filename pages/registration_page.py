@@ -1,11 +1,10 @@
 from pathlib import Path
-import allure
 from selene import browser, have, command
 
 
 class RegistrationPage:
     def open(self):
-            browser.open('/automation-practice-form')
+        browser.open('/automation-practice-form')
 
     def type_first_name(self, first_name):
         browser.element('#firstName').type(first_name)
